@@ -396,6 +396,7 @@
     gsap.set('.hero__chip', { autoAlpha: 0, filter: 'blur(12px)' });
     gsap.set('.hero__badge', { scale: 0, rotation: -120 });
     gsap.set('.hero__foot > *', { y: 34, autoAlpha: 0 });
+    gsap.set('.hero__brand', { y: 34, autoAlpha: 0 });
     gsap.set('.hdr__bar', { yPercent: -170 });
 
     return gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } })
@@ -405,6 +406,7 @@
       .to('.hero__chip', { autoAlpha: 1, filter: 'blur(0px)', duration: 1, stagger: .15 }, .9)
       .to('.hero__badge', { scale: 1, rotation: 0, duration: 1.2, ease: 'back.out(1.6)' }, .8)
       .to('.hero__foot > *', { y: 0, autoAlpha: 1, duration: 1, stagger: .12 }, .8)
+      .to('.hero__brand', { y: 0, autoAlpha: 1, duration: 1 }, 1)
       .to('.hdr__bar', { yPercent: 0, duration: 1 }, 1);
   }
 
@@ -434,6 +436,7 @@
       .to('.hero__chips', { autoAlpha: 0, duration: .25 }, 0)
       .to('.hero__badge', { autoAlpha: 0, duration: .3 }, 0)
       .to('.hero__foot', { autoAlpha: 0, y: -60, duration: .35 }, 0)
+      .to('.hero__brand', { autoAlpha: 0, y: -60, duration: .35 }, 0)
       .to('.hero__veil', { opacity: 1, duration: .55 }, .45);
 
     // Parallax del puntero (solo ratón, solo al inicio de la escena)

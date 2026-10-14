@@ -181,6 +181,13 @@ h2.is-in em,html:not(.is-anim) h2 em{background-size:100% .3em}
 .hero__badge-ico{position:relative;width:1.5rem;height:1.5rem;fill:none;stroke:var(--yellow);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* Logo del Centro de Osteoporosis + teléfono, debajo de la palabra "paso" */
+.hero__brand{position:absolute;z-index:4;right:var(--pad-h);top:calc(var(--at) - 7.5svh + var(--fs)*1.68 + .7rem);width:min(58vw,22rem);display:grid;justify-items:center;gap:.55rem;padding:.7rem .8rem .8rem;border-radius:1.2rem;background:var(--paper);border:1px solid rgb(10 15 61/.08);box-shadow:0 24px 50px -22px rgb(10 15 61/.6)}
+.hero__brand-logo{width:100%;height:auto}
+.hero__brand-num{display:inline-flex;align-items:center;gap:.5rem;font:800 1.15rem/1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink);transition:transform .5s var(--ease)}
+.hero__brand-num .ico{width:1.1rem;height:1.1rem;padding:.2rem;box-sizing:content-box;border-radius:50%;background:var(--ink);color:var(--yellow);stroke-width:2.2}
+.hero__brand-num:hover{transform:translateY(-2px)}
+
 .hero__chips{display:none}
 .hero__chip{position:absolute;z-index:5;display:inline-flex;align-items:center;gap:.55rem;padding:.65rem 1.05rem .65rem .8rem;border-radius:99px;font:700 .82rem/1 var(--f-body);white-space:nowrap;background:rgb(255 253 242/.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgb(10 15 61/.1);box-shadow:0 18px 40px -20px rgb(10 15 61/.55);animation:float 6.5s ease-in-out infinite}
 .hero__chip .ico{width:1.2rem;height:1.2rem;padding:.2rem;border-radius:50%;background:var(--ink);color:var(--yellow);stroke-width:2.2}
@@ -532,8 +539,10 @@ html.menu-open .wa{opacity:0;pointer-events:none}
   .hero__badge text{font-size:9.6px}
   .hero__chips{display:block}
   .hero__chip--1{left:calc(50% - var(--aw)/2 - 13.5rem);top:calc(var(--at) + var(--ah)*.5)}
-  .hero__chip--2{left:calc(50% + var(--aw)/2 + 1.6rem);top:calc(var(--at) + var(--ah)*.5)}
-  .hero__chip--3{left:calc(50% + var(--aw)/2 + 3.4rem);top:calc(var(--at) + var(--ah)*.62)}
+  .hero__chip--2{left:calc(50% - var(--aw)/2 - 16.5rem);top:calc(var(--at) + var(--ah)*.61)}
+  .hero__chip--3{left:calc(50% - var(--aw)/2 - 12rem);top:calc(var(--at) + var(--ah)*.72)}
+  .hero__brand{top:calc(var(--at) + var(--ah)*.1 + var(--fs)*.84 + .9rem);width:max(11rem,min(26rem,calc(50vw - var(--aw)/2 - var(--pad-h) - 1.6rem),calc(122svh - 42.7rem)))}
+  .hero__brand-num{font-size:1.35rem}
   .hero__foot{left:auto;right:var(--pad-h);bottom:2.4rem;width:min(25rem,30vw);gap:1.1rem}
   .hero__eyebrow{display:flex}
   .hero__ctas{padding-right:0}
